@@ -3,6 +3,8 @@ import { Header } from "../components/header";
 
 import Constants from 'expo-constants';
 import Banner from "../components/banner";
+import { Search } from "../components/search";
+import { Section } from "../components/section";
 
 const statusBarHeight = Constants.statusBarHeight
  
@@ -12,7 +14,11 @@ export default function Index() {
       <View className="w-full px-4" style={{ marginTop: statusBarHeight + 8}}>
         <Header/>
         <Banner/>
+
+        <Search/>
       </View>
+
+      <Section name="Comidas em Alta" size="text-lg" label="Veja mais" action={() => console.log("Botão pressionado")}/>
     </ScrollView>
   );
 }
