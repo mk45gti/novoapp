@@ -2,7 +2,7 @@ import { Pressable, Text, View } from 'react-native';
 
 interface Props {
     name: string;
-    size: "text-lg" | "text-x1" | "text-2x1";
+    size: "text-lg" | "text-xl" | "text-2xl";
     label: string;
     action: () => void;
 }
@@ -14,7 +14,7 @@ export function Section({ name, size, label, action }: Props) {
         {name}
     </Text>
 
-    <Pressable>
+    <Pressable onPress={action}>
         <Text>{label}</Text>
     </Pressable>
    </View>
